@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="../assets/css/styles.css">
+
+
+    <link href='https://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Fredoka One' rel='stylesheet'>
+    <title>Document</title>
+</head>
+<body>
+    <!-- ******************** NAVBAR ******************** -->
+    <nav class="navbar navbar-dark navbar-expand-lg">
+        <div class="container-lg">
+           
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon" ></span>
+            </button>
+            <span class="navbar-brand m-auto p-0"><img src="../assets/img/logo2.png" width="65px"  ></span>
+
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup" >
+                <ul class="navbar-nav ms-auto ">
+                    <!-- hit only padding of 4 left and right when it hits medium screen size -->
+                    <li class="nav-item px-lg-4">
+                        
+                        <a class="nav-link" href="/index.html">Home</a>
+                    </li>
+                    <li class="nav-item px-lg-4">
+
+                        <a class="nav-link active" aria-current="page"  href="input.html">Record</a>
+                    </li>
+                    <li class="nav-item px-lg-4">
+
+                        <a class="nav-link" href="/html/entries.html">Entries</a>
+                    </li>
+                    <li class="nav-item px-lg-4">
+
+                        <a class="nav-link" href="/html/analysis.html">Analysis</a>
+                    </li>
+
+                    
+                  
+                  
+                  
+                </ul>
+            </div>
+
+
+        </div>
+    </nav>
+
+
+    <section id="inputSection">
+
+        <div class="container my-5" id="inputContainer">
+            
+                <div class="row">
+                    <div class="col-12 inputContainerHeading">
+                        <h1 class="fs-3 fw-bolder text-center p-2">
+                            Personal Mood Diary
+                        </h1>
+                    </div>
+                </div>
+        
+        
+                <!-- ******************* INPUT FORM ******************* -->
+                <form id="userEntryForm">
+                   
+                        
+                    <div class="row mt-3">
+
+                        <div class="col-12 ">
+                            <h1 class="fs-4 fw-bolder text-center">
+                                How are you?
+                            </h1>
+                        </div>
+                    </div>
+                    <div class="row gy-3 mt-1 justify-content-center gx-lg-5 align-items-center">
+                        <div class="col-4 col-md-3 col-lg-1">
+                            
+                
+                                
+                                <input type="radio" name="emoticon" id="happy-emoticon" value="Happy" class="emoticonInput" onchange="checkedEmoticon(this)">
+                                
+                                <div class="emoticonDiv text-center">
+                
+                                    <label for="happy-emoticon">
+                                        <i class="fa-regular fa-face-laugh-beam fa-3x"></i>
+        
+                                        <span class="labelTextEmoticon">
+                                            Happy
+                                        </span>
+                                    </label>
+                                </div>
+                                
+                                    
+                        
+                            
+                        </div>
+        
+        
+        
+                        <div class="col-4 col-md-3 col-lg-1">
+        
+                            
+                                <input type="radio" name="emoticon" id="sad-emoticon" value="Sad" class="emoticonInput" onchange="checkedEmoticon(this)">
+                
+                                <div class="emoticonDiv text-center">
+                
+                                    
+                                    <label for="sad-emoticon">
+                                        <i class="fa-regular fa-face-frown-open fa-3x"></i>
+        
+                                        <span class="labelTextEmoticon">
+                                            Sad
+                                        </span>
+                                    </label>
+                                </div>
+                                    
+                        
+                            
+                        </div>
+        
+        
+        
+                        <div class="col-4 col-md-3 col-lg-1">
+        
+                            
+                
+                                <input type="radio" name="emoticon" id="neutral-emoticon" value="Neutral" class="emoticonInput" onchange="checkedEmoticon(this)">
+                                <div class="emoticonDiv text-center">
+                
+                                    
+                                    <label for="neutral-emoticon">
+                                        <i class="fa-regular fa-face-meh fa-3x"></i>
+        
+                                        <span class="labelTextEmoticon">
+                                            Neutral
+                                        </span>
+                                    </label>
+                                    
+        
+        
+                                </div>
+                                    
+                        
+                        
+                        </div>
+        
+        
+                        <div class="col-4 col-md-3 col-lg-1">
+        
+                            
+                
+                                <input type="radio" name="emoticon" id="stressed-emoticon" value="Stressed" class="emoticonInput" onchange="checkedEmoticon(this)">
+                                <div class="emoticonDiv text-center">
+                
+                                    
+                                    
+                                    <label for="stressed-emoticon">
+                                        <i class="fa-regular fa-face-tired fa-3x"></i>
+        
+                                        <span class="labelTextEmoticon">
+                                            Stressed
+                                        </span>
+                                    </label>
+                                </div>
+                                    
+                        
+                            
+                        </div>
+        
+        
+                        <div class="col-4 col-md-3 col-lg-1 ">
+        
+                            
+                
+                                <input type="radio" name="emoticon" id="angry-emoticon" value="Angry" class="emoticonInput" onchange="checkedEmoticon(this)">
+                                <div class="emoticonDiv text-center">
+                
+                                    
+                                    <label for="angry-emoticon">
+                                        <i class="fa-regular fa-face-angry fa-3x"></i>
+        
+                                        <span class="labelTextEmoticon">
+                                            Angry
+                                        </span>
+                                    </label>
+                                </div>
+                                    
+                        
+                        
+                        </div>
+        
+        
+                        <div class="col-4 col-md-3 col-lg-1">
+        
+                            
+                
+                                <input type="radio" name="emoticon" id="loved-emoticon" value="Loved" class="emoticonInput" onchange="checkedEmoticon(this)">
+                                <div class="emoticonDiv text-center">
+                
+                                    
+                                    
+                                    <label for="loved-emoticon">
+                                        <i class="fa-regular fa-face-kiss-wink-heart fa-3x"></i>
+        
+                                        <span class="labelTextEmoticon">
+                                            Loved
+                                        </span>
+                                    </label>
+                                </div>
+                                    
+                        
+                        
+                        </div>
+                                        
+                        
+                                        
+                    </div>    
+                    
+                
+                
+                    <div class="row justify-content-center">
+                        <div class="col-12 text-center">
+                            <p id="result" class="fs-5 mt-4"></p>
+
+                        </div>
+                    </div>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                    <!-- ***************** REASONS SECTION ****************** -->
+                    <div class="row mt-3 justify-content-center align-items-center">
+                        <div class="col-md-9 col-lg-8 col-xl-9 reasonsCol">
+                            <div class="row justify-content-center align-items-center text-center g-4 ">
+
+                                <div class="col-12">
+                                    <h1 class="fs-4 fw-bolder text-center">
+                                        Choose up to three reasons that are causing your mood
+                                    </h1>
+                                </div>
+                
+                                <div class="col-4 col-xl-2">
+            
+                                
+                                    <div class="reasonBtn">
+
+                                        <input type="checkbox" name="reason" id="workReason" value="Work" onclick="return limitReason()" onchange="checkedReason()" >
+                                        
+                                    
+                        
+                                        <label for="workReason">
+                                    
+                                            Work
+                                            
+                                        </label>
+                                    </div>
+
+                                
+                                        
+                                        
+                                            
+                                
+                                
+                                </div>
+                                <div class="col-4 col-xl-2 ">
+            
+                                
+                        
+                    
+                                    <div class="reasonBtn">
+
+                                        <input type="checkbox" name="reason" id="studiesReason" value="Studies" onclick="return limitReason()" onchange="checkedReason()">
+                                        
+                                    
+                        
+                                        <label for="studiesReason">
+                                            
+                
+                                            Studies
+                                        </label>
+                                    </div>
+                        
+                            
+                                        
+                                            
+                                
+                    
+                                </div>
+                                <div class="col-4 col-xl-2  ">
+            
+                                    <div class="reasonBtn">
+
+                                        <input type="checkbox" name="reason" id="familyReason" value="Family" onclick="return limitReason()" onchange="checkedReason()">
+                                        
+                                
+                        
+                                            <label for="familyReason">
+                                                
+                    
+                                                Family
+                                            </label>
+                                    </div>
+                    
+                                </div>
+                                <!-- Relationship -->
+                                <div class="col-4  col-xl-2 ">
+            
+                                    <div class="reasonBtn ">
+
+                                        <input type="checkbox" name="reason" id="relationshipReason" value="Relationship" onclick="return limitReason()" onchange="checkedReason()">
+                                        
+                        
+                        
+                                        <label for="relationshipReason">
+                                            
+                                            Relationship
+                                            
+                                        </label>
+                                    </div>
+                                
+            
+                                </div>
+            
+            
+                                <!-- Friends -->
+                                <div class="col-4 col-xl-2 ">
+            
+                            
+                        
+                                    <div class="reasonBtn">
+
+                                        <input type="checkbox" name="reason" id="friendsReason" value="Friends" onclick="return limitReason()" onchange="checkedReason()">
+                                        
+                                        
+                        
+                                        <label for="friendsReason">
+        
+                
+                                            Friends
+                                        </label>
+                                    </div>
+                            
+                                        
+                                            
+                                
+                                
+                                </div>
+
+
+                                <!-- Money -->
+                                <div class="col-4 col-xl-2  ">
+            
+                        
+                        
+                                    <div class="reasonBtn">
+
+                                        <input type="checkbox" name="reason" id="moneyReason" value="Money" onclick="return limitReason()" onchange="checkedReason()">
+                    
+                        
+                                        <label for="moneyReason">
+        
+                
+                                            Money
+                                        </label>
+                                    </div>
+
+                    
+                                </div>
+                                    
+                                        
+                                            
+                                <!-- Traveling -->
+                                <div class="col-4 col-xl-2 ">
+            
+                                    <div class="reasonBtn">
+
+                                        <input type="checkbox" name="reason" id="travelingReason" value="Traveling" onclick="return limitReason()" onchange="checkedReason()">
+                                        
+                                        
+                        
+                                        <label for="travelingReason">
+
+                
+                                            Traveling
+                                        </label>
+                                    </div>
+                                        
+                                    
+                                        
+                                            
+                                
+                                    
+                                </div>
+
+
+                                <!-- Weather -->
+                                <div class="col-4 col-xl-2 ">
+            
+                        
+                                    <div class="reasonBtn">
+
+                                        <input type="checkbox" name="reason" id="weatherReason" value="Weather" onclick="return limitReason()" onchange="checkedReason()">
+                                        
+                                    
+                        
+                                            <label for="weatherReason">
+
+                    
+                                    
+                                                Weather
+                                            
+                                            </label>
+                                    </div>
+                                    
+                                        
+                                            
+                                
+                                
+                                </div>
+            
+
+                                <!-- Hobby -->
+                                <div class="col-4 col-xl-2 ">
+            
+                                
+                        
+                                    <div class="reasonBtn">
+
+                                        <input type="checkbox" name="reason" id="hobbyReason" value="Hobby" onclick="return limitReason()" onchange="checkedReason()">
+                                        
+                                        
+                        
+                                            <label for="hobbyReason">
+
+                    
+                                                Hobby
+                                            </label>
+                                    </div>
+                                
+                                            
+                                
+                                    
+                                </div>
+
+
+
+                                <!-- Party -->
+                                <div class="col-4 col-xl-2 ">
+            
+                                
+                                    <div class="reasonBtn">
+
+                                        <input type="checkbox" name="reason" id="partyReason" value="Party" onclick="return limitReason()" onchange="checkedReason()">
+                                        
+                                    
+                        
+                                            <label for="partyReason">
+        
+                    
+                                                Party
+                                            </label>
+                                    
+                                    </div>
+                                        
+                                        
+                                            
+                                
+                                
+                                </div>
+            
+                                <!-- Movies -->
+                                <div class="col-4 col-xl-2 ">
+            
+                                
+                                    <div class="reasonBtn">
+
+                                        <input type="checkbox" name="reason" id="moviesReason" value="Movies" onclick="return limitReason()" onchange="checkedReason()">
+                                        
+                                
+                        
+                                        <label for="moviesReason">
+
+                
+                                            Movies
+                                        </label>
+                                    </div>
+                                        
+                                        
+                                        
+                                            
+                                
+                        
+                                </div>
+
+
+                                <!-- Food -->
+                                <div class="col-4 col-xl-2 ">
+
+                                
+                                    <div class="reasonBtn">
+
+                                        <input type="checkbox" name="reason" id="foodReason" value="Food" onclick="return limitReason()" onchange="checkedReason()">
+                                        
+                                
+                        
+                                        <label for="foodReason">
+
+                                            Food
+                                        </label>
+                                    
+                                    </div>
+                                        
+                                        
+                                            
+                        
+                                </div>
+
+                                <!-- MUSIC -->
+                                <div class="col-4 col-xl-2 ">
+
+                                
+                        
+                                    <div class="reasonBtn">
+
+                                        <input type="checkbox" name="reason" id="musicReason" value="Music" onclick="return limitReason()" onchange="checkedReason()">
+                                        
+                                
+                        
+                                        <label for="musicReason">
+
+                
+                                            Music
+                                        </label>
+                                    </div>
+                        
+                                        
+                                            
+                            
+                                </div>
+
+
+                                <!-- Shopping -->
+                                <div class="col-4 col-xl-2 ">
+
+                                
+                        
+                                    <div class="reasonBtn">
+
+                                        <input type="checkbox" name="reason" id="shoppingReason" value="Shopping" onclick="return limitReason()" onchange="checkedReason()">
+                                        
+                                    
+                        
+                                        <label for="shoppingReason">
+
+                
+                                            Shopping
+                                        </label>
+    
+                                    </div>
+                                        
+                                            
+                
+                                </div>
+
+                                <!-- Sport -->
+                                <div class="col-4 col-xl-2 ">
+
+                                
+                        
+                                    <div class="reasonBtn">
+
+
+                                        <input type="checkbox" name="reason" id="sportReason" value="Sport" onclick="return limitReason()" onchange="checkedReason()">
+                                        
+                                    
+                        
+                                        <label for="sportReason">
+
+                                            Sport
+                                        </label>
+                                
+                                    </div>
+                                        
+                                            
+                                
+                                
+                                </div>
+                                
+
+
+                                <!-- Other -->
+                                <div class="col-4 col-xl-2 ">
+
+                                    <div class="reasonBtn">
+
+                                        <input type="checkbox" name="reason" id="otherReason" value="other" onclick="return limitReason()">
+                                        
+                                    
+                        
+                                        <label for="otherReason">
+                                            
+                
+                                            Other
+                                        </label>
+                                    
+                                    </div>
+                                </div>
+
+
+
+
+                                <!-- ****************************** NOTE AREA ****************************** -->
+                                <div class="col-12 mt-5">
+
+                                    
+                        
+                                    <textarea rows="6"  cols="50" name="note" id="note" class="form-control textContainer" placeholder="Describe your thoughts here... (Optional)"></textarea>
+                                
+                                </div>
+
+
+
+
+                                <!-- DURATION -->
+                                <div class="col-sm-6 ">
+            
+                                    <label for="durationEmotions" class="fs-5 fw-bolder">
+                                        Select the duration of your emotion(s)
+                                    </label>
+                                    <select name="duration-emotions" id="durationEmotions" class="mt-2">
+                                        <option value="less-than-1">Less than 1 hour</option>
+                                        <option value="saab">2-3 hours</option>
+                                        <option value="mercedes">4-5 hours</option>
+                                        <option value="audi">More than 6 hours</option>
+                                    </select>
+                       
+                                   
+                                </div>
+                                <div class="col-sm-6 ">
+                
+                                 
+                                        <label for="durationSleep" class="fs-5 fw-bolder">
+                                            Select the duration of your sleep
+                                        </label>
+                                        <select name="duration-sleep" id="durationSleep" class="mt-2">
+                                            <option value="less-than-5">Less than 5 hours</option>
+                                            <option value="between-5-7">Between 5 to 7 hours</option>
+                                            <option value="between-8-10">Between 8 to 10 hours</option>
+                                            <option value="more-than-10">More than 10 hours</option>
+                                        </select>
+                                    
+                                </div>
+                                <div class="col-12">
+                
+                                    <div class="date-div">
+                                        <label for="date" class="fs-5 fw-bolder mx-2">
+                                            Enter date: 
+                                        </label>
+                                        <input type="date" id="date" name="date">
+                                    
+                                    </div>
+                                </div>
+                            </div>
+                                
+                                    
+                        
+                        
+                       
+                
+                            
+                                
+                                
+                         
+                        </div>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                    </div>
+                    
+                    <div class="row my-4 text-end">
+        
+                        <div class="col px-4">
+        
+                            <button class="btn btn-success" onclick="addUserEntries()" type="submit">Submit</button>
+                            <span id="reasonText"></span>
+                        </div>
+                        
+                    </div>
+                    <div class="row justify-content-center align-items-center">
+
+                        <div class="col-6 text-center fs-5" id="submitForm">
+                            
+                        </div>
+                    </div>
+                    
+             
+                        
+                </form>
+        </div>
+            
+       
+    </section>
+
+
+
+
+
+    <!-- ******************** FOOTER ******************** -->
+    <section id="footer">
+
+        <footer>
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 text-center mt-3">
+
+                        <h1 class="fs-4 fw-bolder">
+                            Contact Me
+                        </h1>
+                        <p>Email Address: nikkeuks@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </section>
+    
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/11e1d29cf0.js" crossorigin="anonymous"></script>
+    <script src="../assets/js/app.js"></script>
+    
+</body>
+</html>

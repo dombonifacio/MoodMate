@@ -1,0 +1,343 @@
+* {
+    margin:0;
+    padding:0;
+    font-family: 'Ubuntu';
+    color: #2F2E41;
+    
+}
+
+
+html, body{
+    height:100%;
+    
+}
+
+/* NAVBAR */
+
+.navbar {
+    background-color: #2F2E41;
+}
+
+
+
+
+
+/************************************** INTRO SECTION ************************************/
+
+#intro {
+    background-color: #FFF8E0;
+    
+    
+}
+#intro h1{
+    letter-spacing: -3px;
+    
+}
+
+#intro p, #intro h1 {
+    line-height: 1;
+}
+
+#MoodMateText, .pink-btn {
+    
+    font-family: 'Fredoka One';
+}
+
+
+.pink-btn{
+    background-color: #FF9FA0;
+    font-size: 24;
+ 
+    color: #fff;
+    width: 215px;
+    height: 41px;
+    border: none;
+    
+}
+
+
+
+
+
+/************************************** TESTIMONIAL SECTION ************************************/
+#testimonial{
+    background-color: #F9F9F9;
+}
+
+#testimonial h1 {
+    letter-spacing: -1px;
+}
+
+.card {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.card img {
+    height: 205px;
+    
+}
+
+
+
+/************************************** PRIVACY SECTION ************************************/
+
+#privacy{
+    background-color: #FFFBEE;
+}
+
+#privacy h1 {
+    line-height: 1;
+}
+
+
+
+/************************************** FOOTER SECTION ************************************/
+footer {
+    background-color: #2F2E41;
+    
+}
+
+footer h1, footer p{
+    color:#FFFDF6;
+}
+
+
+
+
+
+
+
+
+/************************************** INPUT SECTION ************************************/
+
+
+.reason-container {
+    display:inline-block;
+}
+
+.duration {
+    display: inline-block;
+}
+
+
+input[type=radio]{
+    display: none;
+}
+
+#inputSection i, span{
+    cursor: pointer;
+}
+
+
+
+.labelTextEmoticon{
+    margin-top: 8px;
+}
+
+
+
+span {
+    display:block;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/************************************** INPUT PAGE ************************************/
+#inputContainer{
+    border: 4px solid black;
+    border-bottom-width: 10px;
+    border-radius: 2em;
+    
+    
+}
+
+.inputContainerHeading{
+    border-style: solid;
+    border-color: #2F2E41;;
+    border-top-left-radius:1.6em;
+    border-top-right-radius: 1.6em;
+    background-color: #2F2E41;
+    color: #FFFDF6;
+}
+
+/* .col-1 {
+    margin-left: 12px;
+    margin-right: 12px;
+} */
+
+
+
+/* 
+INPUT PAGE REASON BUTTONS */
+
+input[type=checkbox]{
+
+    width: 100%;
+   display: none;
+}
+
+.reasonsCol label {
+    display: block;
+}
+
+
+.reasonBtn{
+    border: 2px solid #E79686;
+    border-radius:1em;
+    cursor:pointer;
+   
+    padding: 2px;
+    font-size:15.5px;
+
+
+}
+
+.reasonBtn:hover{
+
+    transition: 0.8s;
+    color:#FFFDF6;
+    border-style: dashed;
+
+}
+
+
+
+
+
+
+.reasonBtn label{
+    cursor: pointer;
+}
+
+
+.textContainer {
+    background-color: #F3F0F0;
+    border:1px solid black;
+    border-radius: 0;
+}
+
+
+
+
+/************************************** ENTRIES SECTION ************************************/
+.noteContainer {
+    background-color:#FDF7AA;
+
+
+    
+
+}
+
+.dateRow{
+    background-color: #3F3D56;
+    color:#FFFDF6;
+}
+
+
+/* This is the key header: Mood, Reason, Note, Duration, etc*/
+.keyHeader{
+    display:inline-block;
+    font-weight: bolder;
+    font-size: 20px;
+
+}
+
+
+.noteContainer p {
+    display:inline;
+    font-size: 16px;
+}
+
+.hr {
+    background-color:black;
+    height:1.5px;
+
+
+}
+
+
+@media only screen and (min-width: 768px) and (max-width: 1280px) {
+    .keyChangeMargin{
+        margin:0;
+    }   
+    
+}
+
+
+
+
+/************************************** ANALYSIS SECTION ************************************/
+
+@media only screen and (min-width: 0px) and (max-width: 768px){
+    li > p{
+        font-size:5px;
+    }
+}
+
+#analysis p{
+    display:inline-block;
+    font-size: 20px;
+}
+.para {
+    display: inline-block;
+}
+.icc {
+    display: inline-block;
+}
+li {
+    list-style: none;
+    
+}
+
+.leftEmoticons .fa-regular{
+    /* using position relative will ignore the element's original position and allows you to customize the position */
+    position:relative;
+    bottom:8px;
+    right: 5px;
+
+}
+
+.rightEmoticons .fa-regular{
+    position:relative;
+    bottom:8px;
+    left:5px;
+}
+#neutralEmoticon{
+    position:relative;
+    left:6px;
+}
+
+
+#stressedEmoticon .fa-regular {
+    position: relative;
+    bottom:8px;
+    
+
+
+}
+#stressedEmoticon p {
+    position: relative;
+    right:5px;
+    
+}
+#stressedEmoticon {
+    position:relative;
+    right:17px;
+}
+#lovedEmoticon{
+    position: relative;
+    right:10px;
+}
